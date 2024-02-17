@@ -28,8 +28,8 @@ class Search:
 
     # Here you stablish the apikeys secret to do a research
 
-    apikey = "223c85556e5e62512f546e39a"
-    apisecret = "bec7bfd39738d1e9b974"
+    apikey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    apisecret = "777777777777777777"
     apiurl = "https://api.codepunch.com/dnfeed/v2/"
     url = []
 

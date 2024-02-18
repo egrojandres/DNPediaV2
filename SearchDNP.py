@@ -17,8 +17,6 @@ import os
 
 class Search:
 
-    # Here get the relative current path in the folder
-
     ruta_ext_actual = os.path.abspath(__file__)
     path_automatico = os.path.dirname(os.path.dirname(ruta_ext_actual))
     keywordnt_path = os.path.join(
@@ -26,11 +24,9 @@ class Search:
     keywords_path = os.path.join(
         path_automatico, "BootstrapConsoleTk", "keywords.txt")
 
-    # Here you stablish the apikeys secret to do a research
-
-    apikey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-    apisecret = "777777777777777777"
-    apiurl = "https://api.codepunch.com/dnfeed/v2/"
+    apikey = "PutYourApiKeyHere"
+    apisecret = "PutYourSecretKeyHere"
+    apiurl = "https://api.codepunch.com/dnfeed.php"
     url = []
 
     # Constructor function

@@ -8,6 +8,7 @@ accesory
 accessori
 acessori
 adult
+africa
 airline
 alimentarios
 alimentos
@@ -17,6 +18,7 @@ america
 apartments
 apex
 apuesta
+artistico
 audifonos
 automotriz
 bbva
@@ -26,6 +28,7 @@ bets
 bicicleta
 biden
 bitcoin
+brownie
 cafe
 caixa
 calvinklein
@@ -41,6 +44,7 @@ chicas
 chicken
 chicos
 china
+claudia
 coffe
 construction
 contabil
@@ -50,6 +54,7 @@ contador
 container
 cosmetic
 croptop
+curso
 cycling
 deporte
 descomplicad
@@ -69,6 +74,7 @@ focus
 freefire
 galindo
 game
+geografic
 geriatrico
 girl
 glamour
@@ -92,11 +98,14 @@ itali
 jiujitsu
 jordan
 juridico
+juveil
 kitchen
 kitty
 kungfu
+lawyer
 leggings
 libro
+lollapalooza
 loteri
 lotery
 lottery
@@ -139,9 +148,11 @@ porn
 prada
 prostit
 psicoterap
+radio
 recipes
 resonance
 restaurant
+ricardo
 rockstar
 saludable
 santander
@@ -161,6 +172,7 @@ soat
 soccer
 solar
 sperm
+spirit
 sport
 spotify
 stephe
@@ -174,6 +186,7 @@ telefonica
 thailand
 tour
 trade
+travel
 truck
 trump
 twitter

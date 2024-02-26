@@ -1,8 +1,15 @@
 from tkinter import IntVar
 import ttkbootstrap as ttkb
 from PIL import ImageTk
+from relative_Paths import *
 
 #initiallize App
+class Mini_Frame(ttkb.Frame):
+    def __init__(self, master, **kwards):
+        super().__init__(master, **kwards)
+        self.configure(width=500, height=50,
+                       bootstyle = "secondary")
+
 class App(ttkb.Window):
     def __init__(self):
         super().__init__()
@@ -14,15 +21,8 @@ class App(ttkb.Window):
         self.style.theme_use("sandstone")           # Use Theme
         self.main_window()
 
-
-
     def main_window(self):
 
-        #Principal Frame
-        Principal_Frame = ttkb.Frame(self, width=500, height=600)
-        Principal_Frame.grid(row=0, column=0)
-        Principal_Frame.pack_propagate(False)
-        
         def changeTheme():
             if Var1.get() == 1: 
                 self.style.theme_use("cyborg")
@@ -30,6 +30,13 @@ class App(ttkb.Window):
             else: 
                 self.style.theme_use("sandstone")
                 Select_theme.config(text = 'Light')
+
+        #Principal Frame
+        Principal_Frame = ttkb.Frame(self, width=500, height=600)
+        Principal_Frame.grid(row=0, column=0)
+        Principal_Frame.pack_propagate(False)
+        
+        
 
         Var1 = IntVar()                    # selected variable
         Select_theme = ttkb.Checkbutton(Principal_Frame, bootstyle="info, round-toggle",
@@ -40,19 +47,46 @@ class App(ttkb.Window):
                                         command=changeTheme)
         Select_theme.pack(pady=10)
 
-        #frame1
-      
+        #Frame1
         logo_img = ImageTk.PhotoImage(file = "assets/gtld-search.png")
         logo_widget = ttkb.Label(Principal_Frame, 
                                 image=logo_img)
         logo_widget.image = logo_img
         logo_widget.pack()
-
+        
         Title = ttkb.Label(Principal_Frame, text="Get the recently added domains",
                         bootstyle= "default",
                         font=("TkMenuFont",14)
                         ).pack()
 
+        mini_frmae1 = Mini_Frame(Principal_Frame)
+        mini_frmae1.pack()
+
+        def handle_submit(self, value):
+            countries = list
+            if value == 'Keyword':
+                search_label.configure(text = "Introduce your Kwd")
+            
+            elif value == 'Dict. from Countries':
+
+                search_label.configure(text = "choose a country:")
+                file = Path('docs','customers.json')
+                f = open(file)
+                data = json.loads(f)
+                
+                for d in data:
+                    countries.append(['country'][0])
+
+        search_label = ttkb.Label(mini_frmae1)
+        search_label.grid(row = 0, column = 0) 
+        search_method = IntVar()
+        options  = ['Keyword', 'Dict. from Countries']
+
+        for i, option in enumerate(options):
+            radio_selector = ttkb.Radiobutton(mini_frmae1, text = option,
+                                                value = option, variable= search_method,
+                                                command = lambda x=option: handle_submit(x))
+            radio_selector.grid(row =i+1)     
 
 if __name__ == '__main__':  
     #Run App

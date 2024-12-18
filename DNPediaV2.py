@@ -8,8 +8,8 @@ class SearchDNP:
         self.daysToReview = daysToReview
             
         # Provide your keys
-        self.apikey = "223c85556e5e62512f546e39a"
-        self.apisecret = "bec7bfd39738d1e9b974"
+        self.apikey = "your_api_key"
+        self.apisecret = "your_secret_key"
         self.apiurl = "https://api.codepunch.com/dnfeed/v2/"
         self.keyPath, self.ignoreKeyPath, self.suspiciousUrlsPath = self.relative_path()
         self.url = []
